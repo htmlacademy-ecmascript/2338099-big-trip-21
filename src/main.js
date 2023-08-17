@@ -1,5 +1,7 @@
-import PointView from './view/point-view';
+import PointView from './view/point-view.js';
+import { render, } from './render.js';
 
-const pointView = new PointView();
+const pointElement = document.querySelector('.trip-main');
 
-console.log(pointView);
+
+render(new PointView, pointElement);
