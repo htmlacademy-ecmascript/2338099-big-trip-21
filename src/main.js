@@ -1,9 +1,19 @@
-import PointView from './view/point-view.js';
-import FilterView from './view/trip-filters.js';
-import { render,RenderPosition } from './render.js';
+import NewTripInfoView from './view/trip-info.js';
+import NewTripfilterView from './view/trip-filters.js';
+import NewPointListView from './view/list_view.js';
+import { render, RenderPosition } from './render.js';
+import NewTripPresenter from './presenter/trip-presenter.js';
 
-const pointElement = document.querySelector('.trip-events');
-const filterElement = document.querySelector('.trip-main');
 
-render(new PointView, pointElement, RenderPosition.BEFOREEND);
-render(new FilterView, filterElement);
+const tripContainer = document.querySelector('.trip-events');
+const tripElement = document.querySelector('.trip-main');
+const tripFilterElement = document.querySelector('.trip-controls__filters');
+
+
+render(new NewTripInfoView(), tripElement,RenderPosition.AFTERBEGIN);
+render(new NewTripfilterView(),tripFilterElement);
+render(new NewPointListView(),tripContainer);
+
+const tripPresenter = new NewTripPresenter({tripContainer});
+
+tripPresenter.init();
