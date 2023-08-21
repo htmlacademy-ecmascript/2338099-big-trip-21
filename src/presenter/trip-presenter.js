@@ -1,5 +1,5 @@
 import PointListView from '../view/point-list-view';
-import PointView from '../view/point-view-test';
+import PointView from '../view/point-view';
 import EditingFormtView from '../view/editing-form-view';
 import TripSortingtView from '../view/trip-sorting-view';
 import { render, } from '../render';
