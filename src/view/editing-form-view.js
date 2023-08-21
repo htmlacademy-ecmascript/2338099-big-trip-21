@@ -160,7 +160,7 @@ function createEditingFormTemplate() {
   );
 }
 
-export default class NewEditingFormtView {
+export default class EditingFormtView {
   getTemplate() {
     return createEditingFormTemplate();
   }

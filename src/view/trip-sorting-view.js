@@ -31,7 +31,7 @@ function createSortingInfoTemplate() {
   );
 }
 
-export default class NewTripSortingtView {
+export default class TripSortingtView {
   getTemplate() {
     return createSortingInfoTemplate();
   }
